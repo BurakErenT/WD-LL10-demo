@@ -10,8 +10,18 @@ function addComment(username, comment, addToStart) {
 }
 
 /* Task 2 - Create your showWinnerMessage below according to the TODO */
-
+function showWinnerMessage(message)
+{
+  const winnerDisplay = document.getElementById("winner-display");
+  winnerDisplay.innerHTML = message;
+}
 /* Task 3 - Create your pickWinner below according to the TODO */
+function pickWinner() {
+  const randomIndex = Math.floor(Math.random() * comments.length);
+  const winningEntry = comments[randomIndex];
+  const message = `Winner: <strong class="text-success">${winningEntry}</strong>`;
+  showWinnerMessage(message);
+}
 
 /* Task 4 - Complete the function according to the TODO */
 function showRandomEmoji() {}
